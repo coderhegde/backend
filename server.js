@@ -53,3 +53,27 @@ process.on("unhandledRejection", (err) => {
     process.exit(1);
   });
 });
+const snippetsRoute2 = require('./snippets2');
+const serviceRoute2 = require('./service2');
+// const express = require('express');
+// const app = express();
+const port = 3000;
+
+
+app.use('/', express.static(__dirname + '/webpage'));
+
+app.use(express.json());
+
+app.get('/', function(req, res) {
+    res.sendFile(__dirname + "/webpage/home.html");
+});
+
+app.post("/", function(req, res) {
+    res.sendFile(__dirname + "/webpage/home.html");
+    res.send("Success!!!");
+});
+
+app.use('/', snippetsRoute2);
+app.use('/service2', serviceRoute2);
+
+app.listen(port, () => console.log("Server is running on http://localhost:" + port));
