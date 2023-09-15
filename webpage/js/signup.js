@@ -6,6 +6,7 @@ const signup = function () {
         password = $('#password').val(),
         phone = $('#phone').val();
 	fetch(utils.apiurl + '/register', {
+        mode: 'no-cors',
         method: 'POST',
         credentials: 'include',
         headers: {
