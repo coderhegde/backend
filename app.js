@@ -4,12 +4,12 @@ const errormiddleware = require("./middleware/error");
 const cookieparser = require("cookie-parser");
 const cors = require("cors");
 
-// app.use(
-//   cors({
-//     origin: "http://localhost:8080",
-//     credentials: true,
-//   })
-// );
+app.use(
+  cors({
+    origin: "*",
+    credentials: true,
+  })
+);
 app.post("/...", (req, res) =>{
   res.set('Access-Control-Allow-Origin', '*');
 //whatever you want here
