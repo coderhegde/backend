@@ -1,5 +1,5 @@
 var utils = {};
-utils.apiurl = "http://localhost:8080/api/v1";
+utils.apiurl = "http://localhost:10000/api/v1";
 
 utils.insertHtml = function (selector, html) {
   var targetElem = document.querySelector(selector);

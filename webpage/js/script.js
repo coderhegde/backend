@@ -1,5 +1,5 @@
 import utils from "./util.js";
-const apiurl = 'http://localhost:8080/api/v1';
+const apiurl = "http://localhost:10000/api/v1";
 
 const logout = () => {
 	fetch(utils.apiurl + '/logout', {
